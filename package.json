@@ -9,6 +9,7 @@
     "test": "ng test",
     "test-coverage": "ng test --watch=false --code-coverage",
     "e2e": "ng e2e",
+    "prepare": "npm run build",
     "prebuild": "rimraf tmp dist",
     "build": "gulp inline-templates && ngc -p tsconfig-lib.json && copyfiles package.json README.md LICENSE dist",
     "postbuild": "rimraf tmp",
