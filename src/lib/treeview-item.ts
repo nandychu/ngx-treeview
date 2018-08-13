@@ -13,6 +13,8 @@ export interface TreeItem {
     checked?: boolean;
     collapsed?: boolean;
     children?: TreeItem[];
+    userCreated?: boolean;
+    accAccountId?: string;
 }
 
 export class TreeviewItem {
@@ -20,6 +22,9 @@ export class TreeviewItem {
     private internalChecked = true;
     private internalCollapsed = false;
     private internalChildren: TreeviewItem[];
+    private internaluserCreated = false;
+    private internalAccAccountId = '';
+
     text: string;
     value: any;
 
@@ -50,6 +55,14 @@ export class TreeviewItem {
 
                 return new TreeviewItem(child);
             });
+        }
+      
+        if (isBoolean(item.userCreated)) {
+            this.userCreated = item.userCreated;
+        }
+      
+        if (!isNil(item.accAccountId)) {
+            this.accAccountId = item.accAccountId;
         }
 
         if (autoCorrectChecked) {
