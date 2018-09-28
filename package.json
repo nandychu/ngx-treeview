@@ -4,17 +4,9 @@
   "license": "MIT",
   "description": "An Angular treeview component with checkbox",
   "scripts": {
-    "start": "ng serve",
-    "lint": "ng lint",
-    "test": "ng test",
-    "test-coverage": "ng test --watch=false --code-coverage",
-    "e2e": "ng e2e",
-    "prebuild": "rimraf tmp dist",
     "build": "gulp inline-templates && ngc -p tsconfig-lib.json && copyfiles package.json README.md LICENSE dist",
-    "postbuild": "rimraf tmp",
     "pub": "npm run build && npm publish dist",
-    "predeploy": "rimraf dist",
-    "deploy": "ng build --prod --base-href /ngx-treeview/ && node gh-pages.js"
+    "prepare": "npm run install && npm run build"
   },
   "keywords": [
     "ng",
