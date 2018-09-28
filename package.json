@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gulp inline-templates && ngc -p tsconfig-lib.json && copyfiles package.json README.md LICENSE dist",
     "pub": "npm run build && npm publish dist",
-    "prepare": "npm run install && npm run build"
+    "prepare": "npm install && npm run build"
   },
   "keywords": [
     "ng",
