@@ -14,6 +14,7 @@
     "postbuild": "rimraf tmp",
     "pub": "npm run build && npm publish dist",
     "predeploy": "rimraf dist",
+    "postinstall": "npm run prebuild && npm run build && npm run postbuild",
     "deploy": "ng build --prod --base-href /ngx-treeview/ && node gh-pages.js"
   },
   "keywords": [
