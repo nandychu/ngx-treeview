@@ -7,7 +7,6 @@ npm-debug.log*
 
 # compiled output
 /dist
-/tmp
 /out-tsc
 
 # dependencies
