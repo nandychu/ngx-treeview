@@ -5,7 +5,7 @@
   "description": "An Angular treeview component with checkbox",
   "scripts": {
     "prepare-commit": "gulp inline-templates",
-    "build": "ngc -p tsconfig-lib.json && copyfiles package.json README.md LICENSE dist",
+    "build": "ngc -p tsconfig-lib.json",
     "pub": "npm run build && npm publish dist",
     "prepare": "npm run build"
   },
